@@ -1,0 +1,757 @@
+//General styles
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+#loading {
+    margin-top: 40px;
+
+    img {
+        display: block;
+        margin: 0px auto;
+        width: 10%;
+    }
+
+    width: 100%;
+}
+
+
+//Variables
+$titlesColor: rgba(0, 0, 0, 0.719);
+$bluecolor: rgba(0, 0, 0, 0.555);
+
+//fonts
+@font-face {
+    font-family: "Banks";
+    src: url(../fonts/Banks&MilesSingleLine.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Breezi";
+    src: url(../fonts/breezi_font-webfont.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Logos";
+    src: url(../fonts/Smartphone.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Styles
+body {
+    background-image: url("../images/backgroundjpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.active {
+    border-bottom: 4px solid white;
+}
+
+#socialmedia {
+    display: block;
+    position: fixed;
+    top: 90%;
+    right: 20px;
+    transition: 300ms all;
+    z-index: 90 !important;
+
+    a {
+        font-family: "Logos";
+        font-size: 50px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 300ms all;
+    }
+}
+
+#socialmedia:hover {
+    transform: scale(1.1);
+}
+
+#header {
+    display: block;
+    position: fixed;
+    top: 0px;
+    font-family: "Banks";
+    width: 100%;
+    height: 80px;
+    background-color: $titlesColor;
+    line-height: 75px;
+    border-radius: 0px 0px 20px 20px;
+    z-index: 99;
+
+    #logo {
+        display: block;
+        float: left;
+        width: 30%;
+        padding-top: 8px;
+        padding-left: 10%;
+        cursor: pointer;
+        transition: 500ms all;
+
+        span {
+            display: block;
+            float: left;
+            width: 50%;
+            height: 60px;
+            width: 60px;
+            line-height: 57px;
+            text-align: center;
+            font-size: 35px;
+            border-radius: 999px;
+            background-color: white;
+            transition: 500ms all;
+            z-index: 99;
+            color: $titlesColor;
+        }
+
+        p {
+            display: block;
+            float: left;
+            width: 50%;
+            color: white;
+            font-size: 35px;
+            margin-left: 1%;
+            line-height: 57px;
+            font-weight: bold;
+            transition: 500ms all;
+        }
+
+    }
+
+    #logo:hover {
+        transform: scale(1.08);
+
+        span {
+            background-color: #444;
+            color: white;
+        }
+    }
+
+    #menu-button {
+        display: none;
+        float: right;
+        margin-right: 3%;
+        cursor: pointer;
+
+        img {
+            display: block;
+            margin-top: 10px;
+            width: 68px;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+    }
+
+    #menu {
+        display: block;
+        float: left;
+        width: 50%;
+        color: white;
+        font-weight: bold;
+        padding-left: 10%;
+
+        ul {
+            display: block;
+            width: 100%;
+
+            li {
+                display: inline-block;
+                width: 20%;
+                text-align: center;
+
+                span {
+                    display: block;
+                    width: 100%;
+                    cursor: pointer;
+                    transition: 300ms all;
+                }
+
+                span:hover {
+                    transform: scale(1.1);
+                    color: $titlesColor;
+                }
+            }
+        }
+    }
+
+    #menu-responsive {
+        display: none;
+        position: fixed;
+        top: 80px;
+        width: 100% !important;
+        height: 0%;
+        background-color: $titlesColor;
+
+        ul {
+            li {
+                list-style: none;
+                color: white;
+                width: 100%;
+                border-top: 1px solid #ccc;
+
+                span {
+                    display: block;
+                    cursor: pointer;
+                    width: 80%;
+                    margin: 0px auto;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.center {
+    display: block;
+    width: 95%;
+    margin: 0px auto;
+    overflow: hidden;
+
+    #home {
+        display: block;
+        width: 90%;
+        height: 100vh;
+        padding-top: 100px;
+        margin-bottom: 400px !important;
+
+        ngb-carousel {
+            display: block;
+            margin: 0px auto;
+            margin-left: 10% !important;
+
+            img {
+                display: block;
+                width: 100%;
+                filter:brightness(0.6);
+            }
+        }
+    }
+
+    #services {
+        display: block;
+        width: 90%;
+        height: 100vh;
+        margin: 0px auto;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin-bottom: 400px !important;
+
+        h2 {
+            font-family: "Banks";
+            font-size: 50px;
+            text-align: center;
+            width: 85%;
+            margin: 0px auto;
+            color: $titlesColor;
+            border-bottom: 1px solid $titlesColor;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        article {
+            display: block;
+            float: left;
+            font-family: "Banks";
+            width: 23%;
+            margin: 1%;
+            background-color: $titlesColor;
+            height: 340px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #444;
+            color: white;
+            overflow: hidden;
+            transition: 300ms all;
+
+            span {
+                display: block;
+                margin: 0px auto;
+                margin-top: 20px;
+                font-family: "Breezi";
+                font-size: 200px;
+                text-align: center;
+                color: white;
+                transition: 500ms all;
+            }
+
+            h3 {
+                display: block;
+                position: relative;
+                top: -65px;
+                font-size: 25px;
+                text-align: center;
+                margin-bottom: 20px;
+                opacity: 1;
+                transition: 200ms all;
+            }
+
+            p {
+                display: block;
+                width: 90%;
+                margin: 0px auto;
+                text-align: left;
+                position: relative;
+                top: -100px !important;
+                padding-left: 5% !important;
+                padding-right: 5% !important;
+                transform: translateX(-100%);
+                opacity: 0;
+                transition: 300ms all;
+
+            }
+
+            .special-card {
+                //position: relative;
+                top: -138px !important;
+
+            }
+        }
+
+        article:hover {
+            transform: scale(1.05);
+            background-color: white;
+            color: black;
+            height: 340px;
+
+            span {
+                color: black;
+                font-size: 150px;
+            }
+
+            h3 {
+                opacity: 0;
+            }
+
+            p {
+                opacity: 1;
+                transform: translateX(0%);
+            }
+        }
+    }
+
+    #about {
+        display: block;
+        width: 90%;
+        height: 100%;
+        margin: 0px auto;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin-bottom: 200px;
+
+        h2 {
+            font-family: "Banks";
+            font-size: 50px;
+            text-align: center;
+            width: 85%;
+            margin: 0px auto;
+            color: $titlesColor;
+            border-bottom: 1px solid $titlesColor;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        #info {
+            img {
+                width: 100%;
+            }
+
+            p {
+                display: block;
+                margin-top: 30px;
+                font-family: "Banks";
+                margin-bottom: 40px;
+                color: $titlesColor;
+            }
+
+            #persons {
+                display: block;
+                width: 90%;
+                margin: 0px auto;
+
+                .person {
+                    display: block;
+                    float: left;
+                    width: 48%;
+                    height: 200px;
+                    background-color: $titlesColor;
+                    color: white;
+                    font-family: "Banks";
+                    border-radius: 100px 0px 100px 100px;
+
+                    img {
+                        display: block;
+                        float: left;
+                        //width: 50%;
+                        margin-top: 18px;
+                        margin-left: 5%;
+                        width: 150px;
+                        border: 8px solid white;
+                        border-radius: 999px;
+                    }
+
+                    .data {
+                        display: block;
+                        float: left;
+                        width: 50%;
+                        padding-top: 50px;
+                        padding-left: 2%;
+
+                        h4 {
+                            font-size: 25px;
+                        }
+
+                        p {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+
+                .person:first-child {
+                    margin-right: 4%;
+                }
+            }
+        }
+
+    }
+
+    #contact {
+        display: block;
+        width: 90%;
+        min-height: 1000px;
+        margin: 0px auto;
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        h2 {
+            font-family: "Banks";
+            font-size: 50px;
+            text-align: center;
+            width: 85%;
+            margin: 0px auto;
+            color: $titlesColor;
+            border-bottom: 1px solid $titlesColor;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        #contact-center {
+            width: 100%;
+
+            #contact-form {
+                display: block;
+                width: 100%;
+                margin: 0px auto;
+                margin-bottom: 70px;
+                padding-left: 1.5%;
+
+                div {
+                    margin-top: 20px;
+                    width: 50%;
+                    height: 100px;
+                    float: left;
+
+                    .required-form {
+                        display: block;
+                        color: red;
+                        margin-bottom: 20px;
+                        font-family: "Banks";
+                    }
+
+                    input[type="text"],
+                    input[type="number"] {
+                        font-size: 15px;
+                        width: 90%;
+                        height: 40px;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        transition: 300ms all;
+                        padding-left: 5px;
+                        font-family: "Banks";
+                    }
+
+                    label {
+                        font-size: 25px;
+                        color: $titlesColor;
+                        font-family: "Banks";
+                    }
+                }
+
+                .form-big {
+                    clear: both;
+                    float: none;
+                    display: block;
+                    width: 100%;
+                    height: 170px;
+                    margin: 0px auto;
+
+                    textarea {
+                        font-size: 15px;
+                        width: 93.7%;
+                        min-height: 120px;
+                        resize: none;
+                        margin-top: -10px;
+                        margin-bottom: 20px;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                        padding: 10px;
+                        transition: 300ms all;
+                        font-family: "Banks";
+                    }
+
+                    input[type="file"],
+                    label {
+                        display: block;
+                        margin: 0px auto;
+                        text-align: center;
+                    }
+
+                    input[type="file"] {
+                        margin-top: -10px;
+                    }
+
+                }
+
+                input[type="submit"] {
+                    display: block;
+                    margin: 0px auto;
+                    margin-top: -30px;
+                    height: 40px;
+                    line-height: 30px;
+                    width: 30%;
+                    background-color: $bluecolor;
+                    color: white;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: 300ms all;
+                }
+
+                input[type="submit"]:hover {
+                    background-color: #444;
+                    transform: scale(1.2);
+                    cursor: pointer;
+                }
+
+                input[disabled] {
+                    background-color: #ccc;
+                    cursor: auto !important;
+                }
+
+                input[disabled]:hover {
+                    background-color: #ccc !important;
+                    transform: scale(1.0) !important;
+                }
+
+                input[type="text"]:focus,
+                textarea:focus,
+                input[type="number"]:focus {
+                    border: 1px solid $bluecolor !important;
+                    border-radius: 5px !important;
+
+                }
+            }
+
+        }
+    }
+}
+
+footer {
+    display: block;
+    position: relative;
+    bottom: 0px;
+    font-family: "Banks";
+    width: 100%;
+    height: 80px;
+    background-color: #444;
+    color: white;
+    text-align: center;
+    z-index: 99 !important;
+
+    p {
+        display: block;
+        width: 80%;
+        margin: 0px auto;
+        padding-top: 30px;
+
+        a {
+            color: #ccc;
+        }
+    }
+}
+
+
+//Responsive
+
+@media (max-width: 1046px) {
+    #services {
+        height: 1500px !important;
+
+        article {
+            width: 48% !important;
+        }
+
+        .special-card {
+            top: -64px !important;
+        }
+    }
+
+    #about {
+        height: 1000px !important;
+
+        #info {
+            #persons {
+                margin: 0px auto !important;
+
+                .person {
+                    float: none;
+                    clear: both;
+                    width: 80% !important;
+                    margin: 0px auto;
+                    margin-left: 5.5%;
+                    margin-bottom: 20px;
+                    margin-right: 0% !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #header {
+
+        border-radius: 0px 0px 0px 0px !important;
+
+
+        #menu {
+            display: none !important;
+        }
+
+        #menu-button {
+            display: block;
+        }
+
+        #menu-responsive {
+            display: block !important;
+            overflow: hidden;
+
+        }
+    }
+
+    ngb-carousel {
+
+        img {
+            width: auto !important;
+            height: 550px;
+        }
+    }
+
+    footer{
+        height: 90px;
+        font-size: 15px;
+
+        p{
+            padding-top: 20px;
+        }
+
+    }
+}
+
+@media (max-width: 628px) {
+    #services {
+        .special-card {
+            top: -100px !important;
+        }
+    }
+
+    #about {
+        #info {
+            #persons {
+                width: 100% !important;
+
+                .person {
+                    width: 100% !important;
+                    margin-left: 0% !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #header {
+        #logo {
+            padding-left: 3% !important;
+            width: 36% !important;
+        }
+    }
+
+    #services {
+        height: 3000px !important;
+
+        article {
+            display: block;
+            float: none !important;
+            clear: both !important;
+            width: 100% !important;
+            margin-bottom: 20px !important;
+        }
+
+        .special-card {
+            top: -64px !important;
+        }
+    }
+
+    #about {
+        .person {
+            border-radius: 100px 10px 10px 100px !important;
+
+            .data {
+                width: 35% !important;
+
+                h4 {
+                    font-size: 20px !important;
+                }
+
+            }
+        }
+    }
+
+    #contact {
+        #contact-form {
+            div {
+                float: none !important;
+                clear: both !important;
+                width: 100% !important;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 371px){
+    #logo {
+        
+        p {
+            width: 40% !important;
+        }
+
+    }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
