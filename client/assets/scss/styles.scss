@@ -59,39 +59,34 @@ body {
     border-bottom: 4px solid white;
 }
 
+
 #socialmedia {
-    /*position: fixed;
-        top: 88%;
-        left: 4%;*/
-    text-decoration: none;
-    font-family: "Logos";
-    font-size: 50px;
-    cursor: pointer;
-    z-index: 999999 !important;
-
-}
-
-#socialmedia2 {
     position: fixed;
     top: 88%;
     left: 4%;
     text-decoration: none;
-    font-family: "Logos";
     font-size: 50px;
     cursor: pointer;
     z-index: 999999 !important;
+
+    span {
+        font-family: "Logos";
+    }
 }
 
-#socialmedia3 {
+#socialmedia2 {
     position: fixed;
     top: 88%;
     right: 4%;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     font-family: a;
-    font-size: 50px;
     cursor: pointer;
     z-index: 999999 !important;
+
+    img{
+        width: 50px;
+    }
 
 }
 
